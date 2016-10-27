@@ -1,0 +1,14 @@
+{% block footer %}
+  <footer id="footer" class="footer footer-wrapper">
+    <div class="container">
+     {% include 'footer-menu.twig' %}
+        <div class="footer-inner">
+        {% if function('pll_current_language') == 'vi' %}
+            {{acfwidget('copy_right_footer', 'footer_widget-4')}}
+          {% elseif function('pll_current_language') == 'ja' %}
+            {{acfwidget('copy_right_footer', 'footer_widget-3')}}
+          {% endif %}
+      </div>
+    </div>
+  </footer>
+{% endblock %}
